@@ -3,9 +3,7 @@
 @section('admin_title', 'Manajemen Barang')
 
 @section('content')
-    @include('admin._nav')
-
-    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
         <div class="px-5 py-3 border-b border-slate-100">
             <h2 class="font-bold">Semua Barang</h2>
         </div>
@@ -15,7 +13,7 @@
         @else
             <div class="overflow-x-auto">
                 <table class="w-full text-sm">
-                    <thead class="bg-slate-50 text-left text-slate-500">
+                    <thead class="bg-[#0F172A] text-left text-slate-200">
                         <tr>
                             <th class="px-5 py-3 font-medium">Barang</th>
                             <th class="px-3 py-3 font-medium">Pemilik</th>
@@ -26,7 +24,7 @@
                     </thead>
                     <tbody>
                         @foreach ($items as $item)
-                            <tr class="border-t border-slate-100">
+                            <tr class="border-t border-slate-100 hover:bg-blue-50/60 transition">
                                 <td class="px-5 py-3">
                                     <div class="font-semibold">{{ $item->nama_barang }}</div>
                                     <div class="text-xs text-slate-500">{{ $item->metode }}</div>
@@ -41,7 +39,7 @@
                                 </td>
                                 <td class="px-5 py-3">
                                     <a href="{{ route('items.show', $item) }}"
-                                        class="text-sm text-emerald-700 font-semibold hover:underline mr-2">Lihat</a>
+                                        class="text-sm text-blue-600 font-semibold hover:text-blue-500 mr-2">Lihat</a>
                                     <form action="{{ route('admin.items.destroy', $item) }}" method="POST" class="inline"
                                         onsubmit="return confirm('Hapus barang ini?');">
                                         @csrf

@@ -3,9 +3,7 @@
 @section('admin_title', 'Manajemen Pengguna')
 
 @section('content')
-    @include('admin._nav')
-
-    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
         <div class="px-5 py-3 border-b border-slate-100">
             <h2 class="font-bold">Daftar Pengguna</h2>
         </div>
@@ -15,7 +13,7 @@
         @else
             <div class="overflow-x-auto">
                 <table class="w-full text-sm">
-                    <thead class="bg-slate-50 text-left text-slate-500">
+                    <thead class="bg-[#0F172A] text-left text-slate-200">
                         <tr>
                             <th class="px-5 py-3 font-medium">Nama</th>
                             <th class="px-3 py-3 font-medium">Email</th>
@@ -26,7 +24,7 @@
                     </thead>
                     <tbody>
                         @foreach ($users as $user)
-                            <tr class="border-t border-slate-100">
+                            <tr class="border-t border-slate-100 hover:bg-blue-50/60 transition">
                                 <td class="px-5 py-3 font-semibold">{{ $user->nama }}</td>
                                 <td class="px-3 py-3 text-slate-600">{{ $user->email }}</td>
                                 <td class="px-3 py-3">
@@ -47,7 +45,7 @@
                                             @endforeach
                                         </select>
                                         <button type="submit"
-                                            class="px-3 py-1 rounded text-xs font-semibold bg-slate-900 text-white hover:bg-black">Simpan</button>
+                                            class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-600 text-white hover:bg-blue-500">Simpan</button>
                                     </form>
                                 </td>
                             </tr>
