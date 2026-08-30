@@ -26,7 +26,7 @@
         <div id="sidebar-backdrop" class="fixed inset-0 z-30 hidden bg-slate-950/60 lg:hidden" data-sidebar-close></div>
         <aside id="app-sidebar" class="fixed inset-y-0 left-0 z-40 flex w-64 -translate-x-full flex-col bg-[#0F172A] px-4 py-5 text-white shadow-2xl transition-transform duration-300 lg:translate-x-0">
             <a href="{{ route('dashboard') }}" class="flex items-center px-3 pb-7" aria-label="LOOPIN Beranda">
-                <img src="{{ asset('images/loopin2.png') }}" alt="Loopin" class="h-12 w-auto">
+                <img src="{{ asset('images/loopin2.png') }}" alt="Loopin" class="h-16 w-auto">
             </a>
             <nav class="flex-1 overflow-y-auto text-sm font-medium">
                 @if ($role === 'admin')
@@ -110,12 +110,12 @@
             <footer class="bg-[#0F172A] text-slate-300">
         <div class="mx-auto grid max-w-[1440px] grid-cols-2 gap-8 px-4 py-10 sm:grid-cols-4 sm:px-6 lg:px-8">
             <div class="col-span-2 sm:col-span-1">
-                <img src="{{ asset('images/loopin2.png') }}" alt="Loopin" class="h-8 w-auto">
+                <img src="{{ asset('images/loopin2.png') }}" alt="Loopin" class="h-12 w-auto">
                 <p class="mt-3 max-w-xs text-xs leading-5 text-slate-400">Platform donasi dan barter siswa SMK Telkom Sidoarjo.</p>
             </div>
             <div><p class="mb-3 text-xs font-bold uppercase tracking-widest text-white">Platform</p><p class="text-sm text-slate-400">Jelajahi barang</p><p class="mt-2 text-sm text-slate-400">Dampak LOOPIN</p></div>
             <div><p class="mb-3 text-xs font-bold uppercase tracking-widest text-white">Akun</p><p class="text-sm text-slate-400">Profil pengguna</p><p class="mt-2 text-sm text-slate-400">Pusat notifikasi</p></div>
-            <div><p class="mb-3 text-xs font-bold uppercase tracking-widest text-white">Dropzone</p><p class="text-sm text-slate-400">Serah terima aman</p><p class="mt-2 text-sm text-slate-400">SMK Telkom Sidoarjo</p></div>
+            <div><p class="mb-3 text-xs font-bold uppercase tracking-widest text-white">Area</p><p class="text-sm text-slate-400">Serah terima aman</p><p class="mt-2 text-sm text-slate-400">SMK Telkom Sidoarjo</p></div>
         </div>
             </footer>
         </div>

@@ -1,0 +1,14 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#F5F3FF"/>
+  <circle cx="108" cy="110" r="72" fill="#DDD6FE"/>
+  <circle cx="640" cy="500" r="90" fill="#E9D5FF"/>
+  <path d="M175 420C220 300 282 245 370 245C450 245 510 300 562 420" stroke="#4F46E5" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="180" cy="430" r="40" fill="#C4B5FD"/>
+  <circle cx="370" cy="245" r="42" fill="#A78BFA"/>
+  <circle cx="560" cy="430" r="42" fill="#7C3AED"/>
+  <path d="M370 245V420" stroke="#8B5CF6" stroke-width="14" stroke-linecap="round"/>
+  <path d="M180 430H560" stroke="#8B5CF6" stroke-width="14" stroke-linecap="round"/>
+  <rect x="216" y="96" width="120" height="80" rx="18" fill="#E0E7FF"/>
+  <rect x="464" y="96" width="120" height="80" rx="18" fill="#E0E7FF"/>
+  <text x="400" y="520" text-anchor="middle" fill="#4C1D95" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Kabel &amp; Jaringan</text>
+</svg>

@@ -22,117 +22,91 @@
                     class="px-5 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-500 transition shadow-lg shadow-blue-900/30">
                     Lihat Katalog
                 </a>
-                @if ($isLoggedIn)
-                    <a href="{{ route('items.create') }}"
-                        class="px-5 py-3 rounded-lg border border-slate-600 text-slate-200 font-semibold hover:border-blue-400 hover:text-white transition">
-                        Posting Barang
-                    </a>
-                @else
-                    <a href="{{ route('register') }}"
-                        class="px-5 py-3 rounded-lg border border-slate-600 text-slate-200 font-semibold hover:border-blue-400 hover:text-white transition">
-                        Daftar & Mulai
-                    </a>
-                @endif
+                <a href="{{ route('items.create') }}"
+                    class="px-5 py-3 rounded-lg border border-slate-600 text-slate-200 font-semibold hover:border-blue-400 hover:text-white transition">
+                    Posting Barang
+                </a>
             </div>
         </div>
     </section>
 
-    @if ($isLoggedIn)
-        {{-- Role: Siswa / Orang Tua (pengguna) --}}
-        @if ($role === 'pengguna')
-            <section class="grid sm:grid-cols-3 gap-4 mb-8">
-                <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
-                    <p class="text-sm text-slate-500">Barang kamu</p>
-                    <p class="text-3xl font-black mt-1 text-slate-900">{{ $myItemsCount }}</p>
-                </div>
-                <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
-                    <p class="text-sm text-slate-500">Sudah selesai</p>
-                    <p class="text-3xl font-black mt-1 text-blue-600">{{ $myCompleted }}</p>
-                </div>
-                <div class="bg-slate-900 rounded-xl p-5 flex flex-col justify-center">
-                    <a href="{{ route('items.create') }}" class="text-blue-400 font-semibold hover:text-blue-300">
-                        + Posting barang baru
-                    </a>
-                </div>
-            </section>
+    {{-- Role: Siswa / Orang Tua (pengguna) --}}
+    @if ($role === 'pengguna')
+        <section class="grid sm:grid-cols-3 gap-4 mb-8">
+            <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">Barang kamu</p>
+                <p class="text-3xl font-black mt-1 text-slate-900">{{ $myItemsCount }}</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">Sudah selesai</p>
+                <p class="text-3xl font-black mt-1 text-blue-600">{{ $myCompleted }}</p>
+            </div>
+            <div class="bg-slate-900 rounded-xl p-5 flex flex-col justify-center">
+                <a href="{{ route('items.create') }}" class="text-blue-400 font-semibold hover:text-blue-300">
+                    + Posting barang baru
+                </a>
+            </div>
+        </section>
 
-            @if (isset($myItems) && $myItems->isNotEmpty())
-                <section class="mb-8">
-                    <h2 class="text-lg font-bold mb-3 text-slate-900">Barang Terakhir Kamu</h2>
-                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                        @foreach ($myItems as $item)
-                            <article class="bg-white border border-slate-200 rounded-xl p-4 hover:border-blue-400 transition">
-                                <img src="{{ $item->foto }}" alt="{{ $item->nama_barang }}"
-                                    class="w-full h-36 object-cover rounded-lg">
-                                <h3 class="font-semibold mt-3 text-slate-900">{{ $item->nama_barang }}</h3>
-                                <span class="inline-flex mt-2 px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">{{ $item->status }}</span>
-                                <a href="{{ route('items.show', $item) }}"
-                                    class="inline-block mt-3 text-sm text-blue-600 font-semibold hover:text-blue-800">
-                                    Lihat detail
-                                </a>
-                            </article>
-                        @endforeach
-                    </div>
-                </section>
-            @endif
-        @endif
-
-        {{-- Role: SEKOLAH --}}
-        @if ($role === 'sekolah')
-            <section class="bg-slate-900 text-white rounded-xl p-6 mb-8">
-                <h2 class="font-bold text-lg">Halo, {{ $userName }}</h2>
-                <p class="text-sm text-slate-300 mt-1">
-                    Kelola sirkulasi perlengkapan sekolahmu dari halaman permintaan dan katalog.
-                </p>
-                <div class="mt-4 flex gap-2">
-                    <a href="{{ route('requests.index') }}"
-                        class="px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-500 transition">
-                        Kelola Permintaan
-                    </a>
-                    <a href="{{ route('items.create') }}"
-                        class="px-4 py-2 rounded-lg border border-slate-600 text-slate-200 hover:border-blue-500 transition">
-                        Posting Barang
-                    </a>
+        @if (isset($myItems) && $myItems->isNotEmpty())
+            <section class="mb-8">
+                <h2 class="text-lg font-bold mb-3 text-slate-900">Barang Terakhir Kamu</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    @foreach ($myItems as $item)
+                        <article class="bg-white border border-slate-200 rounded-xl p-4 hover:border-blue-400 transition">
+                            <img src="{{ $item->foto }}" alt="{{ $item->nama_barang }}"
+                                class="w-full h-36 object-cover rounded-lg">
+                            <h3 class="font-semibold mt-3 text-slate-900">{{ $item->nama_barang }}</h3>
+                            <span class="inline-flex mt-2 px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">{{ $item->status }}</span>
+                            <a href="{{ route('items.show', $item) }}"
+                                class="inline-block mt-3 text-sm text-blue-600 font-semibold hover:text-blue-800">
+                                Lihat detail
+                            </a>
+                        </article>
+                    @endforeach
                 </div>
             </section>
         @endif
+    @endif
 
-        {{-- Role: ADMIN --}}
-        @if ($role === 'admin')
-            <section class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
-                    <p class="text-sm text-slate-500">Total Barang</p>
-                    <p class="text-3xl font-black mt-1 text-slate-900">{{ $totalBarang }}</p>
-                </div>
-                <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
-                    <p class="text-sm text-slate-500">Tersedia</p>
-                    <p class="text-3xl font-black mt-1 text-blue-600">{{ $totalTersedia }}</p>
-                </div>
-                <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
-                    <p class="text-sm text-slate-500">Selesai</p>
-                    <p class="text-3xl font-black mt-1 text-blue-600">{{ $totalSelesai }}</p>
-                </div>
-                <div class="bg-slate-900 rounded-xl p-5">
-                    <p class="text-sm text-slate-400">Pengguna terdaftar</p>
-                    <p class="text-3xl font-black mt-1 text-white">{{ $totalPengguna }}</p>
-                </div>
-            </section>
-        @endif
-    @else
-        <section class="bg-white border border-slate-200 rounded-xl p-6 mb-8 shadow-sm">
-            <h2 class="font-bold text-lg text-slate-900">Bergabung untuk mulai berbagi</h2>
-            <p class="text-sm text-slate-500 mt-1">
-                Daftar gratis untuk memposting barang donasi/barter atau mengajukan permintaan perlengkapan sekolah.
+    {{-- Role: SEKOLAH --}}
+    @if ($role === 'sekolah')
+        <section class="bg-slate-900 text-white rounded-xl p-6 mb-8">
+            <h2 class="font-bold text-lg">Halo, {{ $userName }}</h2>
+            <p class="text-sm text-slate-300 mt-1">
+                Kelola sirkulasi perlengkapan sekolahmu dari halaman permintaan dan katalog.
             </p>
             <div class="mt-4 flex gap-2">
-                <a href="{{ route('register') }}"
+                <a href="{{ route('requests.index') }}"
                     class="px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-500 transition">
-                    Daftar Sekarang
+                    Kelola Permintaan
                 </a>
-                <a href="{{ route('login') }}"
-                    class="px-4 py-2 rounded-lg border border-slate-300 text-slate-700 font-semibold hover:border-blue-500 hover:text-blue-600 transition">
-                    Masuk
+                <a href="{{ route('items.create') }}"
+                    class="px-4 py-2 rounded-lg border border-slate-600 text-slate-200 hover:border-blue-500 transition">
+                    Posting Barang
                 </a>
+            </div>
+        </section>
+    @endif
+
+    {{-- Role: ADMIN --}}
+    @if ($role === 'admin')
+        <section class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">Total Barang</p>
+                <p class="text-3xl font-black mt-1 text-slate-900">{{ $totalBarang }}</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">Tersedia</p>
+                <p class="text-3xl font-black mt-1 text-blue-600">{{ $totalTersedia }}</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+                <p class="text-sm text-slate-500">Selesai</p>
+                <p class="text-3xl font-black mt-1 text-blue-600">{{ $totalSelesai }}</p>
+            </div>
+            <div class="bg-slate-900 rounded-xl p-5">
+                <p class="text-sm text-slate-400">Pengguna terdaftar</p>
+                <p class="text-3xl font-black mt-1 text-white">{{ $totalPengguna }}</p>
             </div>
         </section>
     @endif
@@ -159,9 +133,7 @@
     <section>
         <div class="flex items-center justify-between mb-3">
             <h2 class="text-lg font-bold text-slate-900">Barang Tersedia Terbaru</h2>
-            @if ($isLoggedIn)
-                <p class="text-sm text-slate-500">Masuk sebagai: <span class="text-slate-900 font-medium">{{ $userName }}</span></p>
-            @endif
+            <p class="text-sm text-slate-500">Masuk sebagai: <span class="text-slate-900 font-medium">{{ $userName }}</span></p>
         </div>
 
         @if ($featuredItems->isEmpty())

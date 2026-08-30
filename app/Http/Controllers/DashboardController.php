@@ -26,20 +26,22 @@ class DashboardController extends Controller
             'role' => $role,
         ];
 
-        if ($isLoggedIn && $penggunaId) {
-            $viewData['myItemsCount'] = Barang::query()
-                ->where('pengguna_id', $penggunaId)
-                ->count();
-            $viewData['myCompleted'] = Barang::query()
-                ->where('pengguna_id', $penggunaId)
-                ->where('status', 'selesai')
-                ->count();
-            $viewData['myItems'] = Barang::query()
-                ->where('pengguna_id', $penggunaId)
-                ->latest('id')
-                ->take(3)
-                ->get();
+        if (!$isLoggedIn) {
+            return view('welcome', $viewData);
         }
+
+        $viewData['myItemsCount'] = Barang::query()
+            ->where('pengguna_id', $penggunaId)
+            ->count();
+        $viewData['myCompleted'] = Barang::query()
+            ->where('pengguna_id', $penggunaId)
+            ->where('status', 'selesai')
+            ->count();
+        $viewData['myItems'] = Barang::query()
+            ->where('pengguna_id', $penggunaId)
+            ->latest('id')
+            ->take(3)
+            ->get();
 
         if ($role === 'admin') {
             $viewData['totalBarang'] = Barang::query()->count();

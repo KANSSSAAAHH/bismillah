@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
 @section('content')
-    <a href="{{ route('dashboard') }}" class="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-blue-600 transition">← Kembali</a>
     <div class="max-w-5xl mx-auto grid lg:grid-cols-2 bg-white rounded-2xl overflow-hidden shadow-xl shadow-slate-200/70 border border-slate-200">
         <div class="p-6 sm:p-10 lg:p-12">
-        <div class="mb-7">
-            <p class="text-xs uppercase tracking-[0.22em] text-blue-600 font-bold">Bergabung dalam siklus</p>
+            <a href="{{ route('dashboard') }}" class="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-blue-600 transition">← Kembali</a>
+            <div class="mb-7">
+                <p class="text-xs uppercase tracking-[0.22em] text-blue-600 font-bold">Bergabung dalam siklus</p>
             <h1 class="text-3xl font-bold text-[#0F172A] mt-2">Buat akunmu</h1>
             <p class="text-sm text-slate-500 mt-2">Mulai sirkulasikan perlengkapan sekolahmu.</p>
         </div>

@@ -1,0 +1,10 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#EFF6FF"/>
+  <circle cx="170" cy="120" r="80" fill="#DBEAFE"/>
+  <circle cx="630" cy="500" r="84" fill="#DBEAFE"/>
+  <path d="M270 200L400 150L530 200L495 445H305L270 200Z" fill="#2563EB"/>
+  <path d="M305 205L400 265L495 205" stroke="#BFDBFE" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="400" cy="255" r="18" fill="#93C5FD"/>
+  <path d="M330 445V500H470V445" stroke="#1D4ED8" stroke-width="18" stroke-linecap="round"/>
+  <text x="400" y="520" text-anchor="middle" fill="#1E3A8A" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Seragam &amp; Pakaian</text>
+</svg>

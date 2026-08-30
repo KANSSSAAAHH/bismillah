@@ -1,0 +1,13 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#EEF6FF"/>
+  <circle cx="600" cy="120" r="80" fill="#DBEAFE"/>
+  <rect x="170" y="160" width="460" height="250" rx="28" fill="#1D4ED8"/>
+  <rect x="208" y="195" width="385" height="180" rx="18" fill="#EFF6FF"/>
+  <rect x="255" y="218" width="120" height="120" rx="12" fill="#BFDBFE"/>
+  <rect x="390" y="218" width="165" height="18" rx="8" fill="#93C5FD"/>
+  <rect x="390" y="255" width="138" height="18" rx="8" fill="#93C5FD"/>
+  <rect x="390" y="292" width="118" height="18" rx="8" fill="#93C5FD"/>
+  <rect x="310" y="420" width="180" height="26" rx="13" fill="#2563EB"/>
+  <rect x="338" y="446" width="124" height="24" rx="12" fill="#DBEAFE"/>
+  <text x="400" y="520" text-anchor="middle" fill="#1E3A8A" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Perangkat Elektronik</text>
+</svg>
