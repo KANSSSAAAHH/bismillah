@@ -17,7 +17,7 @@
         <header class="rounded-full border border-slate-200 bg-white/90 backdrop-blur">
             <nav class="mx-auto flex max-w-[1200px] items-center justify-between gap-3 px-4 py-3 sm:px-6">
                 <div class="flex items-center gap-3">
-                    <img src="{{ asset('images/loopin1.png') }}" alt="LOOPIN" class="h-12 w-auto sm:h-14">
+                    <img src="{{ asset('Images/loopin1.png') }}" alt="LOOPIN" class="h-12 w-auto sm:h-14">
                 </div>
                 <div class="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
                     <a href="#" class="text-slate-900">Beranda</a>
@@ -71,19 +71,19 @@
                     <div class="relative flex items-center justify-center">
                         <div class="relative grid w-full max-w-[440px] grid-cols-2 gap-4">
                             <div class="rounded-[28px] bg-white p-4 shadow-xl shadow-slate-200/70">
-                                <img src="{{ asset('images/kalkulator.png') }}" alt="Kalkulator" class="h-28 w-full rounded-2xl object-cover">
+                                <img src="{{ asset('Images/kalkulator.png') }}" alt="Kalkulator" class="h-28 w-full rounded-2xl object-cover">
                                 <div class="mt-3 text-center text-sm font-semibold text-slate-700">Kalkulator</div>
                             </div>
                             <div class="rounded-[28px] bg-white p-4 shadow-xl shadow-slate-200/70">
-                                <img src="{{ asset('images/seragam-kegiatan.jpeg') }}" alt="Seragam kegiatan" class="h-28 w-full rounded-2xl object-cover">
+                                <img src="{{ asset('Images/seragam-kegiatan.jpeg') }}" alt="Seragam kegiatan" class="h-28 w-full rounded-2xl object-cover">
                                 <div class="mt-3 text-center text-sm font-semibold text-slate-700">Seragam Kegiatan</div>
                             </div>
                             <div class="rounded-[28px] bg-white p-4 shadow-xl shadow-slate-200/70">
-                                <img src="{{ asset('images/seragam-sekolah.png') }}" alt="Seragam sekolah" class="h-28 w-full rounded-2xl object-cover">
+                                <img src="{{ asset('Images/seragam-sekolah.png') }}" alt="Seragam sekolah" class="h-28 w-full rounded-2xl object-cover">
                                 <div class="mt-3 text-center text-sm font-semibold text-slate-700">Seragam Sekolah</div>
                             </div>
                             <div class="rounded-[28px] bg-white p-4 shadow-xl shadow-slate-200/70">
-                                <img src="{{ asset('images/tas.png') }}" alt="Tas" class="h-28 w-full rounded-2xl object-cover">
+                                <img src="{{ asset('Images/tas.png') }}" alt="Tas" class="h-28 w-full rounded-2xl object-cover">
                                 <div class="mt-3 text-center text-sm font-semibold text-slate-700">Tas</div>
                             </div>
                         </div>

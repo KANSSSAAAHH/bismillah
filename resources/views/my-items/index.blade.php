@@ -19,7 +19,7 @@
                 <tbody class="divide-y divide-slate-100">
                     @foreach ($items as $item)
                         <tr class="hover:bg-blue-50/50 transition">
-                            <td class="px-5 py-4"><div class="flex items-center gap-3"><img src="{{ $item->foto ?: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=120&q=80' }}" alt="{{ $item->nama_barang }}" class="h-12 w-12 rounded-lg object-cover"><span class="font-semibold text-slate-900">{{ $item->nama_barang }}</span></div></td>
+                            <td class="px-5 py-4"><div class="flex items-center gap-3"><img src="{{ $item->image_url }}" alt="{{ $item->nama_barang }}" class="h-12 w-12 rounded-lg object-cover"><span class="font-semibold text-slate-900">{{ $item->nama_barang }}</span></div></td>
                             <td class="px-3 py-4 text-slate-600">{{ str_replace('_', ' ', $item->kategori) }}</td>
                             <td class="px-3 py-4 text-slate-600">{{ $item->metode }}</td>
                             <td class="px-3 py-4"><div class="flex items-center gap-2"><span class="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700">{{ $item->status }}</span><form action="{{ route('items.status', $item) }}" method="POST" class="flex items-center gap-1">@csrf @method('PATCH')<select name="status" class="rounded-lg border-slate-300 py-1 text-xs">@foreach (\App\Models\Barang::STATUS as $status)<option value="{{ $status }}" @selected($item->status === $status)>{{ $status }}</option>@endforeach</select><button class="text-xs font-semibold text-blue-600 hover:text-blue-500">Ubah</button></form></div></td>

@@ -3,8 +3,8 @@
 @section('content')
     <div class="grid lg:grid-cols-2 gap-6 lg:gap-10">
         <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-            <img src="{{ $item->foto ?: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=85' }}" alt="{{ $item->nama_barang }}" class="w-full h-[360px] object-cover rounded-lg">
-            <div class="mt-3 grid grid-cols-3 gap-3"><img src="{{ $item->foto ?: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=240&q=80' }}" alt="" class="h-20 w-full rounded-lg object-cover ring-2 ring-blue-500"><img src="{{ $item->foto ?: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=240&q=80' }}" alt="" class="h-20 w-full rounded-lg object-cover"><img src="{{ $item->foto ?: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=240&q=80' }}" alt="" class="h-20 w-full rounded-lg object-cover"></div>
+            <img src="{{ $item->image_url }}" alt="{{ $item->nama_barang }}" class="w-full h-[360px] object-cover rounded-lg">
+            <div class="mt-3 grid grid-cols-3 gap-3"><img src="{{ $item->image_url }}" alt="" class="h-20 w-full rounded-lg object-cover ring-2 ring-blue-500"><img src="{{ $item->image_url }}" alt="" class="h-20 w-full rounded-lg object-cover"><img src="{{ $item->image_url }}" alt="" class="h-20 w-full rounded-lg object-cover"></div>
         </div>
         <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
             <span class="inline-flex px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">{{ $item->status }}</span>

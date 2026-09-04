@@ -27,11 +27,8 @@
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             @foreach ($items as $item)
                 <article class="flex flex-col bg-white border border-slate-200 rounded-xl p-3 hover:border-blue-400 hover:shadow-lg transition">
-                    <div class="relative"><img src="{{ $item->foto ?: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=640&q=80' }}" alt="{{ $item->nama_barang }}" class="w-full h-44 rounded-lg object-cover"><span class="absolute right-2 top-2 rounded-full bg-blue-100 px-2.5 py-1 text-xs font-bold text-blue-700">{{ $item->status }}</span></div>
+                    <div class="relative"><img src="{{ $item->image_url }}" alt="{{ $item->nama_barang }}" class="w-full h-44 rounded-lg object-cover"><span class="absolute right-2 top-2 rounded-full bg-blue-100 px-2.5 py-1 text-xs font-bold text-blue-700">{{ $item->status }}</span></div>
                     <h2 class="mt-3 font-semibold">{{ $item->nama_barang }}</h2>
-                    <span class="inline-flex mt-2 px-2.5 py-1 rounded-full bg-slate-100 text-xs text-slate-600">{{ str_replace('_', ' ', $item->kategori) }}</span>
-                    <p class="text-sm mt-2 line-clamp-2 text-slate-600">{{ $item->deskripsi }}</p>
-                    <div class="mt-3 flex items-center gap-2 text-xs"><span class="rounded-full bg-slate-100 px-2 py-1 text-slate-600">{{ $item->kondisi }}</span><span class="rounded-full bg-blue-50 px-2 py-1 text-blue-700">{{ $item->metode }}</span></div>
                     <a href="{{ route('items.show', $item) }}" class="mt-4 w-full rounded-lg bg-[#0F172A] py-2.5 text-center text-sm font-semibold text-white hover:bg-blue-600 transition">Lihat Detail</a>
                 </article>
             @endforeach

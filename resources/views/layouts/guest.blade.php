@@ -20,7 +20,7 @@
     <header class="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
         <div class="mx-auto flex max-w-[1440px] items-center gap-6 px-4 py-4 sm:px-6 lg:px-8">
             <a href="{{ route('dashboard') }}" class="flex items-center" aria-label="LOOPIN Beranda">
-                <img src="{{ asset('images/loopin1.png') }}" alt="Loopin" class="h-8 w-auto">
+                <img src="{{ asset('Images/loopin1.png') }}" alt="Loopin" class="h-8 w-auto">
             </a>
 
             <nav class="ml-4 hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
@@ -55,7 +55,7 @@
     <footer class="bg-[#0F172A] text-slate-300">
         <div class="mx-auto grid max-w-[1440px] grid-cols-2 gap-8 px-4 py-10 sm:grid-cols-4 sm:px-6 lg:px-8">
             <div class="col-span-2 sm:col-span-1">
-                <img src="{{ asset('images/loopin2.png') }}" alt="Loopin" class="h-8 w-auto">
+                <img src="{{ asset('Images/loopin2.png') }}" alt="Loopin" class="h-8 w-auto">
                 <p class="mt-3 max-w-xs text-xs leading-5 text-slate-400">Platform donasi dan barter siswa SMK Telkom Sidoarjo.</p>
             </div>
             <div><p class="mb-3 text-xs font-bold uppercase tracking-widest text-white">Platform</p><p class="text-sm text-slate-400">Jelajahi barang</p><p class="mt-2 text-sm text-slate-400">Dampak LOOPIN</p></div>

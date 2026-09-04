@@ -7,7 +7,7 @@
         <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-blue-500/10 rounded-full blur-2xl"></div>
 
         <div class="relative">
-            <img src="{{ asset('images/loopin2.png') }}" alt="Loopin" class="h-10 mb-5">
+            <img src="{{ asset('Images/loopin2.png') }}" alt="Loopin" class="h-10 mb-5">
 
             <p class="text-xs uppercase tracking-[0.25em] text-blue-400 font-semibold">Keep It in Circulation</p>
             <h1 class="text-3xl sm:text-5xl font-bold mt-3 leading-tight max-w-3xl">
@@ -54,7 +54,7 @@
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                     @foreach ($myItems as $item)
                         <article class="bg-white border border-slate-200 rounded-xl p-4 hover:border-blue-400 transition">
-                            <img src="{{ $item->foto }}" alt="{{ $item->nama_barang }}"
+                            <img src="{{ $item->image_url }}" alt="{{ $item->nama_barang }}"
                                 class="w-full h-36 object-cover rounded-lg">
                             <h3 class="font-semibold mt-3 text-slate-900">{{ $item->nama_barang }}</h3>
                             <span class="inline-flex mt-2 px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">{{ $item->status }}</span>
@@ -144,9 +144,8 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 @foreach ($featuredItems as $item)
                     <article class="flex flex-col bg-white border border-slate-200 rounded-xl p-3 hover:border-blue-400 hover:shadow-md transition">
-                        <div class="relative"><img src="{{ $item->foto ?: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=640&q=80' }}" alt="{{ $item->nama_barang }}" class="w-full h-40 object-cover rounded-lg"><span class="absolute right-2 top-2 rounded-full bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-700">Tersedia</span></div>
+                        <div class="relative"><img src="{{ $item->image_url }}" alt="{{ $item->nama_barang }}" class="w-full h-40 object-cover rounded-lg"><span class="absolute right-2 top-2 rounded-full bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-700">Tersedia</span></div>
                         <h3 class="font-semibold mt-3 text-slate-900">{{ $item->nama_barang }}</h3>
-                        <div class="flex items-center gap-2 mt-2"><span class="px-2 py-1 rounded-full bg-slate-100 text-xs text-slate-600">{{ str_replace('_', ' ', $item->kategori) }}</span><span class="px-2 py-1 rounded-full bg-blue-50 text-blue-700 text-xs">Tersedia</span></div>
                         <a href="{{ route('items.show', $item) }}" class="mt-4 w-full rounded-lg bg-[#0F172A] py-2 text-center text-sm font-semibold text-white hover:bg-blue-600 transition">Lihat Detail</a>
                     </article>
                 @endforeach

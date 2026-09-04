@@ -38,6 +38,37 @@ class ItemImageFallbackTest extends TestCase
             'foto' => '',
         ]);
 
-        $this->assertSame('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80', $item->image_url);
+        $this->assertSame('', $item->image_url);
+    }
+
+    public function test_named_products_use_their_verified_local_assets(): void
+    {
+        $assets = [
+            'Kabel' => 'Images/kabel.png',
+            'Kalkulator' => 'Images/kalkulator.png',
+            'Seragam Kegiatan' => 'Images/seragam-kegiatan.jpeg',
+            'Seragam yang Sudah Kekecilan' => 'Images/seragam-sekolah.png',
+            'Tas' => 'Images/tas.png',
+            'Flashdisk' => 'Images/flashdisk (1).png',
+            'Perlengkapan Praktik' => 'Images/perlengkapan-praktik.png',
+            'Adaptor' => 'Images/adaptor.png',
+        ];
+
+        foreach ($assets as $name => $assetPath) {
+            $item = new Barang(['nama_barang' => $name, 'foto' => 'old-invalid-url']);
+
+            $this->assertFileExists(public_path($assetPath));
+            $this->assertSame(asset($assetPath), $item->image_url);
+        }
+    }
+
+    public function test_old_product_photo_urls_are_preserved(): void
+    {
+        $item = new Barang([
+            'nama_barang' => 'Headset',
+            'foto' => 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=80',
+        ]);
+
+        $this->assertSame($item->foto, $item->image_url);
     }
 }

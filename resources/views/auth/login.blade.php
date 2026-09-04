@@ -43,7 +43,7 @@
             <div class="absolute inset-0 opacity-30" style="background-image: linear-gradient(135deg, transparent 30%, #2563EB 30%, #2563EB 31%, transparent 31%), linear-gradient(45deg, transparent 64%, #3B82F6 64%, #3B82F6 65%, transparent 65%); background-size: 42px 42px;"></div>
             <div class="absolute -right-24 -top-24 h-72 w-72 rounded-full border-[32px] border-blue-600/30"></div>
             <div class="relative">
-                <img src="{{ asset('images/loopin2.png') }}" alt="Loopin" class="h-14 w-auto">
+                <img src="{{ asset('Images/loopin2.png') }}" alt="Loopin" class="h-14 w-auto">
                 <p class="text-xl font-semibold mt-4 max-w-xs">Barang berputar, kesempatan belajar terus tumbuh.</p>
                 <p class="text-sm text-slate-300 mt-3 max-w-sm">Temukan perlengkapan sekolah layak pakai dari teman-teman di komunitasmu.</p>
             </div>

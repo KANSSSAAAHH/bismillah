@@ -5,7 +5,7 @@
 <header class="mb-8 bg-[#0F172A] text-white rounded-2xl p-5 sm:p-6 shadow-lg shadow-slate-900/10">
     <div class="flex items-center justify-between flex-wrap gap-2">
         <div>
-            <div class="flex items-center gap-3"><img src="{{ asset('images/loopin2.png') }}" alt="Loopin" class="h-8 w-auto"><div><p class="text-xs uppercase tracking-[0.2em] text-blue-300">Panel Administrator</p>
+            <div class="flex items-center gap-3"><img src="{{ asset('Images/loopin2.png') }}" alt="Loopin" class="h-8 w-auto"><div><p class="text-xs uppercase tracking-[0.2em] text-blue-300">Panel Administrator</p>
             <h1 class="text-xl sm:text-2xl font-bold">@yield('admin_title', 'Dashboard Admin')</h1></div></div>
         </div>
         <a href="{{ route('dashboard') }}"
